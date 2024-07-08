@@ -17,9 +17,11 @@ defmodule Snl.Application do
       # Start Finch
       {Finch, name: Snl.Finch},
       # Start the Endpoint (http/https)
-      SnlWeb.Endpoint
+      SnlWeb.Endpoint,
       # Start a worker by calling: Snl.Worker.start_link(arg)
       # {Snl.Worker, arg}
+      # pubsub config
+      {Phoenix.PubSub, name: Snl.PubSub}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
