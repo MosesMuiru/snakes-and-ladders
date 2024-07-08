@@ -44,7 +44,7 @@ defmodule Snl.Bot do
 
   def handle_call(:bot_roll_die, _from, times_played) do
     roll_state = Play.roll_die() 
-    PubSub.broadcast(Snl.PubSub, "playing", :bot_has_played)
+    PubSub.broadcast(Snl.PubSub, "playing", {:bot_roll, roll_state})
     {:reply, roll_state, times_played+1}
   end
 

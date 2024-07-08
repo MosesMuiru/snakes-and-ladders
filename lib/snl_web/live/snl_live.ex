@@ -18,8 +18,6 @@ defmodule SnlWeb.SnlLive do
 
   def handle_event("roll", map, socket) do
   	die_roll = Play.roll_die()
-        IO.inspect(map)
-        IO.inspect(socket)
 
   	new_socket =
   	socket
@@ -29,8 +27,7 @@ defmodule SnlWeb.SnlLive do
   end
 
   def handle_call(:bot_roll_die, {}, socket) do
-
-    IO.puts("this is woring")
     {:noreply, socket}
   end
+
 end
