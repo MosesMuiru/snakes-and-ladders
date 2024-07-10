@@ -27,7 +27,7 @@ defmodule Snl.Bot do
     
   """
 
-  def start_link do
+  def start_link(_) do
     times_played = 0;
     GenServer.start_link(__MODULE__, times_played, name: __MODULE__) 
   end

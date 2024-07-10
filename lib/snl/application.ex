@@ -19,9 +19,7 @@ defmodule Snl.Application do
       # Start the Endpoint (http/https)
       SnlWeb.Endpoint,
       # Start a worker by calling: Snl.Worker.start_link(arg)
-      # {Snl.Worker, arg}
-      # pubsub config
-      {Phoenix.PubSub, name: Snl.PubSub}
+      {Snl.Bot, name: Snl.Bot}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
