@@ -48,4 +48,9 @@ defmodule SnlWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug SnlWeb.Router
+
+  # socket specification 
+  socket "/live", SnlWeb.UserSocket,
+    websocket: true,
+    longpoll: false
 end

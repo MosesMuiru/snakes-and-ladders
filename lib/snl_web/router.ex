@@ -18,6 +18,7 @@ defmodule SnlWeb.Router do
     pipe_through :browser
 
     live "/", SnlLive, :roll
+    live "/home", SnlLive, :home
   end
 
   # Other scopes may use custom stacks.
