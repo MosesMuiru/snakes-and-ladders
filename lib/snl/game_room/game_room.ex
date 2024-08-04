@@ -6,7 +6,7 @@ defmodule Snl.GameRoom do
   schema "game_rooms" do
 
     field :room_unique_id, :integer
-    field :name
+    field :name, :string
 
     has_many :users, Snl.User
 
@@ -19,7 +19,7 @@ defmodule Snl.GameRoom do
     room
     |> cast(params, [:room_unique_id, :name])
     |> validate_required([:name, :room_unique_id])
-    |> unique_constraints([:room_id, :name])
+    |> unique_constraint([:room_unique_id, :name])
 
   end
 end
